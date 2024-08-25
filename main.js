@@ -1,21 +1,26 @@
-// Animation au défilement pour les sections
-window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('.services-section, .gallery-section, .testimonials-section, .contact-section');
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("Bienvenue sur Mon Site BG moderne!");
 
-    sections.forEach(section => {
-        const sectionPosition = section.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
-
-        if (sectionPosition < screenPosition) {
-            section.classList.add('show');
-        } else {
-            section.classList.add('hidden');
-        }
+    const googleSignInButton = document.querySelector('.google-signin');
+    googleSignInButton.addEventListener('click', function () {
+        console.log("Tentative de connexion avec Google.");
     });
+
+    const signupForm = document.getElementById('signup-form');
+    const loginForm = document.getElementById('login-form');
+
+    if (signupForm) {
+        signupForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log("Inscription avec email:", event.target.email.value);
+        });
+    }
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log("Connexion avec email:", event.target.email.value);
+        });
+    }
 });
 
-// Initialisation des animations
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.services-section, .gallery-section, .testimonials-section, .contact-section');
-    sections.forEach(section => section.classList.add('hidden'));
-});
