@@ -1,9 +1,15 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+    background-color: #1a1a1d;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -16,6 +22,7 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -26,15 +33,63 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-main {
-    padding: 20px;
-    max-width: 500px;
-    margin: auto;
-    background: white;
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    flex: 1;
+}
+
+.form-container {
+    background: #2c2c34;
+    padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 form {
@@ -50,21 +105,7 @@ form input {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-button {
-    padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #555;
 }
 
 .google-signin {
@@ -72,6 +113,19 @@ button:hover {
     align-items: center;
     justify-content: center;
     background-color: #4285F4;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.google-signin:hover {
+    background-color: #357ae8;
+    transform: scale(1.05);
 }
 
 .google-signin img {
@@ -83,4 +137,15 @@ button:hover {
 .divider {
     text-align: center;
     margin: 20px 0;
+    color: #ccc;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
